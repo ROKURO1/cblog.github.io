@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web Worker | Cbasu</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="FrontEnd Basics">
+    
+    <link rel="preload" href="/cblog.github.io/assets/css/0.styles.fceb914e.css" as="style"><link rel="preload" href="/cblog.github.io/assets/js/app.d8a0645a.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/3.7fe797ad.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/1.36fcc0b1.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/26.9d2d0ef5.js" as="script"><link rel="prefetch" href="/cblog.github.io/assets/js/10.09721554.js"><link rel="prefetch" href="/cblog.github.io/assets/js/11.2f313439.js"><link rel="prefetch" href="/cblog.github.io/assets/js/12.e9052a8a.js"><link rel="prefetch" href="/cblog.github.io/assets/js/13.72a2af11.js"><link rel="prefetch" href="/cblog.github.io/assets/js/14.f4a4ba38.js"><link rel="prefetch" href="/cblog.github.io/assets/js/15.ac6cd703.js"><link rel="prefetch" href="/cblog.github.io/assets/js/16.a092ad7d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/17.41daee80.js"><link rel="prefetch" href="/cblog.github.io/assets/js/18.263778f7.js"><link rel="prefetch" href="/cblog.github.io/assets/js/19.de397fb6.js"><link rel="prefetch" href="/cblog.github.io/assets/js/20.9d7dc0d3.js"><link rel="prefetch" href="/cblog.github.io/assets/js/21.a4f2ae32.js"><link rel="prefetch" href="/cblog.github.io/assets/js/22.913529fa.js"><link rel="prefetch" href="/cblog.github.io/assets/js/23.e553f2ec.js"><link rel="prefetch" href="/cblog.github.io/assets/js/24.e92d046f.js"><link rel="prefetch" href="/cblog.github.io/assets/js/25.0a1d9f45.js"><link rel="prefetch" href="/cblog.github.io/assets/js/27.226ff2d2.js"><link rel="prefetch" href="/cblog.github.io/assets/js/28.6c3b4b1e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/29.02c222a0.js"><link rel="prefetch" href="/cblog.github.io/assets/js/30.19789709.js"><link rel="prefetch" href="/cblog.github.io/assets/js/31.7a00c04e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/32.5014aa97.js"><link rel="prefetch" href="/cblog.github.io/assets/js/33.216fcfba.js"><link rel="prefetch" href="/cblog.github.io/assets/js/34.64c28738.js"><link rel="prefetch" href="/cblog.github.io/assets/js/35.c09baead.js"><link rel="prefetch" href="/cblog.github.io/assets/js/36.10bcdd7d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/37.d365d448.js"><link rel="prefetch" href="/cblog.github.io/assets/js/38.b0108a1d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/39.98df4fbe.js"><link rel="prefetch" href="/cblog.github.io/assets/js/4.88c5667f.js"><link rel="prefetch" href="/cblog.github.io/assets/js/40.b0905d95.js"><link rel="prefetch" href="/cblog.github.io/assets/js/41.5b6e9eac.js"><link rel="prefetch" href="/cblog.github.io/assets/js/5.3784bb0e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/6.0f09439e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/7.92a21e76.js"><link rel="prefetch" href="/cblog.github.io/assets/js/8.7042e7a1.js"><link rel="prefetch" href="/cblog.github.io/assets/js/9.39031d2d.js">
+    <link rel="stylesheet" href="/cblog.github.io/assets/css/0.styles.fceb914e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-cd01cc30><div data-v-cd01cc30><div id="loader-wrapper" class="loading-wrapper" data-v-4cd7a24a data-v-cd01cc30 data-v-cd01cc30><div class="loader-main" data-v-4cd7a24a><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-623c7d26 data-v-cd01cc30 data-v-cd01cc30><h3 class="title" style="display:none;" data-v-623c7d26 data-v-623c7d26>Cbasu</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-623c7d26 data-v-623c7d26><input type="password" value="" data-v-623c7d26> <span data-v-623c7d26>Konck! Knock!</span> <button data-v-623c7d26>OK</button></label> <div class="footer" style="display:none;" data-v-623c7d26 data-v-623c7d26><span data-v-623c7d26><i class="iconfont reco-theme" data-v-623c7d26></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-623c7d26>vuePress-theme-reco</a></span> <span data-v-623c7d26><i class="iconfont reco-copyright" data-v-623c7d26></i> <a data-v-623c7d26><span data-v-623c7d26>Cbasu</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-cd01cc30><header class="navbar" data-v-cd01cc30><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/cblog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Cbasu</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/JavaScript/Js/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/css/basics.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/vue/basic.html" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/performance.html" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/WebWorker.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  WebWorker
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/PWA.html" class="nav-link"><i class="iconfont undefined"></i>
+  PWA
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/regularExpression.html" class="nav-link"><i class="iconfont undefined"></i>
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/crossDomain.html" class="nav-link"><i class="iconfont undefined"></i>
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      计算机基础
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/designPattern.html" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/network/http.html" class="nav-link"><i class="iconfont undefined"></i>
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/algorithm/tree.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/codeByHand/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  手撕代码
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/questions.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题目
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目相关
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-cd01cc30></div> <aside class="sidebar" data-v-cd01cc30><div class="personal-info-wrapper" data-v-2a0ed2ae data-v-cd01cc30><!----> <h3 class="name" data-v-2a0ed2ae>
+    Cbasu
+  </h3> <div class="num" data-v-2a0ed2ae><div data-v-2a0ed2ae><h3 data-v-2a0ed2ae>0</h3> <h6 data-v-2a0ed2ae>Article</h6></div> <div data-v-2a0ed2ae><h3 data-v-2a0ed2ae>0</h3> <h6 data-v-2a0ed2ae>Tag</h6></div></div> <hr data-v-2a0ed2ae></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/JavaScript/Js/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/css/basics.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/vue/basic.html" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/performance.html" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/WebWorker.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  WebWorker
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/PWA.html" class="nav-link"><i class="iconfont undefined"></i>
+  PWA
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/regularExpression.html" class="nav-link"><i class="iconfont undefined"></i>
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/crossDomain.html" class="nav-link"><i class="iconfont undefined"></i>
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      计算机基础
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/designPattern.html" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/network/http.html" class="nav-link"><i class="iconfont undefined"></i>
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/algorithm/tree.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/codeByHand/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  手撕代码
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/questions.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题目
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目相关
+</a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-623c7d26 data-v-cd01cc30><h3 class="title" style="display:none;" data-v-623c7d26 data-v-623c7d26></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-623c7d26 data-v-623c7d26><input type="password" value="" data-v-623c7d26> <span data-v-623c7d26>Konck! Knock!</span> <button data-v-623c7d26>OK</button></label> <div class="footer" style="display:none;" data-v-623c7d26 data-v-623c7d26><span data-v-623c7d26><i class="iconfont reco-theme" data-v-623c7d26></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-623c7d26>vuePress-theme-reco</a></span> <span data-v-623c7d26><i class="iconfont reco-copyright" data-v-623c7d26></i> <a data-v-623c7d26><span data-v-623c7d26>Cbasu</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-cd01cc30><main class="page"><div class="page-title" style="display:none;"><h1 class="title">Web Worker</h1> <div data-v-8bc6ae5c><i class="iconfont reco-account" data-v-8bc6ae5c><span data-v-8bc6ae5c>Cbasu</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="web-worker"><a href="#web-worker" class="header-anchor">#</a> Web Worker</h1> <p><strong>Web Worker 是HTML5标准的一部分，这一规范定义了一套 API，它允许一段JavaScript程序运行在主线程之外的另外一个线程中。</strong></p> <h2 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h2> <p>只需调用Worker() 构造函数并传入一个要在 worker 线程内运行的脚本的URI，即可创建一个新的worker。</p> <div class="language- extra-class"><pre class="language-text"><code>var myWorker = new Worker(&quot;my_task.js&quot;);
+
+// my_task.js中的代码 
+var i = 0;
+function timedCount(){
+    i = i+1;
+    postMessage(i);
+    setTimeout(timedCount, 1000);
+}
+timedCount();
+</code></pre></div><h2 id="数据通信"><a href="#数据通信" class="header-anchor">#</a> 数据通信</h2> <p>当实例运行了一个 Worker 线程之后，两个线程是运行在完全独立的环境中，他们之间的通信是通过基于事件监听机制的 message 来实现的，<code>new Worker()</code> 之后会返回一个实例对象，它包含一个 <code>postMessage</code> 方法，可以通过调用这个方法来给 Worker 线程传递信息；同时我们可以给这个对象监听事件，这样，就能在 Worker 中触发事件通信的时候接收到数据了
+在 Worker 的脚本中，我们可以调用全局函数 <code>postMessage</code> 和给全局的 <code>onmessage</code> 赋值来发送和监听数据和事件：</p> <div class="language- extra-class"><pre class="language-text"><code>// worker.js
+console.log('WORKER TASK: ', 'running');```
+// 监听事件
+onmessage = function (e) {
+  console.log('WORKER TASK: ', 'RECEIVE', e.data);
+  // 发送数据事件
+  postMessage('Hello, I am Worker');
+}
+</code></pre></div><h2 id="worker-的环境与作用域"><a href="#worker-的环境与作用域" class="header-anchor">#</a> Worker 的环境与作用域</h2> <p>在 Worker 线程的运行环境中没有 window 全局对象，也无法访问 DOM 对象，所以一般来说他只能来执行纯 JavaScript 的计算操作。</p> <h2 id="sharedworker"><a href="#sharedworker" class="header-anchor">#</a> SharedWorker</h2> <p>对于 Web Worker ，一个 tab 页面只能对应一个 Worker 线程，是相互独立的；<br>
+而 SharedWorker 提供了能力能够让不同标签中页面共享的同一个 Worker 脚本线程；<br>
+当然，有个很重要的限制就是它们需要满足同源策略，也就是需要在同域下；<br>
+在 SharedWorker 的使用中，我们发现对于 SharedWorker 实例对象，我们需要通过 port 属性来访问到主要方法；</p> <h2 id="优点"><a href="#优点" class="header-anchor">#</a> 优点</h2> <p>Web Worker 的实现为前端程序带来了后台计算的能力，可以实现主 UI 线程与复杂计运算线程的分离，从而极大减轻了因计算量大而造成 UI 阻塞而出现的界面渲染卡、掉帧的情况，并且更大程度地利用了终端硬件的性能；
+同时把程序之间的任务更清晰、条理化；</p> <h2 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景：</h2> <ul><li>对于图像、视频、音频的解析处理；</li> <li>canvas 中的图像计算处理；</li> <li>大量的 ajax 请求或者网络服务轮询；</li> <li>大量数据的计算处理（排序、检索、过滤、分析...）；</li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c8d125c6 data-v-c8d125c6><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c8d125c6><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c8d125c6></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c8d125c6></path></svg></div><div class="kanbanniang" data-v-ee8d62e6><div class="banniang-container" style="display:;" data-v-ee8d62e6><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-ee8d62e6>
+      欢迎来到 Cbasu
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-ee8d62e6><i class="kbnfont kbn-ban-home ban-home" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-message message" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-close close" data-v-ee8d62e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-ee8d62e6><i class="kbnfont kbn-ban-info info" data-v-ee8d62e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-ee8d62e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-ee8d62e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-ee8d62e6>
+    看板娘
+  </div></div></div></div>
+    <script src="/cblog.github.io/assets/js/app.d8a0645a.js" defer></script><script src="/cblog.github.io/assets/js/3.7fe797ad.js" defer></script><script src="/cblog.github.io/assets/js/1.36fcc0b1.js" defer></script><script src="/cblog.github.io/assets/js/26.9d2d0ef5.js" defer></script>
+  </body>
+</html>

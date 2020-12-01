@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一 作用域 | Cbasu</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="FrontEnd Basics">
+    
+    <link rel="preload" href="/cblog.github.io/assets/css/0.styles.fceb914e.css" as="style"><link rel="preload" href="/cblog.github.io/assets/js/app.d8a0645a.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/3.7fe797ad.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/1.36fcc0b1.js" as="script"><link rel="preload" href="/cblog.github.io/assets/js/24.e92d046f.js" as="script"><link rel="prefetch" href="/cblog.github.io/assets/js/10.09721554.js"><link rel="prefetch" href="/cblog.github.io/assets/js/11.2f313439.js"><link rel="prefetch" href="/cblog.github.io/assets/js/12.e9052a8a.js"><link rel="prefetch" href="/cblog.github.io/assets/js/13.72a2af11.js"><link rel="prefetch" href="/cblog.github.io/assets/js/14.f4a4ba38.js"><link rel="prefetch" href="/cblog.github.io/assets/js/15.ac6cd703.js"><link rel="prefetch" href="/cblog.github.io/assets/js/16.a092ad7d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/17.41daee80.js"><link rel="prefetch" href="/cblog.github.io/assets/js/18.263778f7.js"><link rel="prefetch" href="/cblog.github.io/assets/js/19.de397fb6.js"><link rel="prefetch" href="/cblog.github.io/assets/js/20.9d7dc0d3.js"><link rel="prefetch" href="/cblog.github.io/assets/js/21.a4f2ae32.js"><link rel="prefetch" href="/cblog.github.io/assets/js/22.913529fa.js"><link rel="prefetch" href="/cblog.github.io/assets/js/23.e553f2ec.js"><link rel="prefetch" href="/cblog.github.io/assets/js/25.0a1d9f45.js"><link rel="prefetch" href="/cblog.github.io/assets/js/26.9d2d0ef5.js"><link rel="prefetch" href="/cblog.github.io/assets/js/27.226ff2d2.js"><link rel="prefetch" href="/cblog.github.io/assets/js/28.6c3b4b1e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/29.02c222a0.js"><link rel="prefetch" href="/cblog.github.io/assets/js/30.19789709.js"><link rel="prefetch" href="/cblog.github.io/assets/js/31.7a00c04e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/32.5014aa97.js"><link rel="prefetch" href="/cblog.github.io/assets/js/33.216fcfba.js"><link rel="prefetch" href="/cblog.github.io/assets/js/34.64c28738.js"><link rel="prefetch" href="/cblog.github.io/assets/js/35.c09baead.js"><link rel="prefetch" href="/cblog.github.io/assets/js/36.10bcdd7d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/37.d365d448.js"><link rel="prefetch" href="/cblog.github.io/assets/js/38.b0108a1d.js"><link rel="prefetch" href="/cblog.github.io/assets/js/39.98df4fbe.js"><link rel="prefetch" href="/cblog.github.io/assets/js/4.88c5667f.js"><link rel="prefetch" href="/cblog.github.io/assets/js/40.b0905d95.js"><link rel="prefetch" href="/cblog.github.io/assets/js/41.5b6e9eac.js"><link rel="prefetch" href="/cblog.github.io/assets/js/5.3784bb0e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/6.0f09439e.js"><link rel="prefetch" href="/cblog.github.io/assets/js/7.92a21e76.js"><link rel="prefetch" href="/cblog.github.io/assets/js/8.7042e7a1.js"><link rel="prefetch" href="/cblog.github.io/assets/js/9.39031d2d.js">
+    <link rel="stylesheet" href="/cblog.github.io/assets/css/0.styles.fceb914e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-cd01cc30><div data-v-cd01cc30><div id="loader-wrapper" class="loading-wrapper" data-v-4cd7a24a data-v-cd01cc30 data-v-cd01cc30><div class="loader-main" data-v-4cd7a24a><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div><div data-v-4cd7a24a></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-623c7d26 data-v-cd01cc30 data-v-cd01cc30><h3 class="title" style="display:none;" data-v-623c7d26 data-v-623c7d26>Cbasu</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-623c7d26 data-v-623c7d26><input type="password" value="" data-v-623c7d26> <span data-v-623c7d26>Konck! Knock!</span> <button data-v-623c7d26>OK</button></label> <div class="footer" style="display:none;" data-v-623c7d26 data-v-623c7d26><span data-v-623c7d26><i class="iconfont reco-theme" data-v-623c7d26></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-623c7d26>vuePress-theme-reco</a></span> <span data-v-623c7d26><i class="iconfont reco-copyright" data-v-623c7d26></i> <a data-v-623c7d26><span data-v-623c7d26>Cbasu</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-cd01cc30><header class="navbar" data-v-cd01cc30><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/cblog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Cbasu</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/JavaScript/Js/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/css/basics.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/vue/basic.html" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/performance.html" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/WebWorker.html" class="nav-link"><i class="iconfont undefined"></i>
+  WebWorker
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/PWA.html" class="nav-link"><i class="iconfont undefined"></i>
+  PWA
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/regularExpression.html" class="nav-link"><i class="iconfont undefined"></i>
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/crossDomain.html" class="nav-link"><i class="iconfont undefined"></i>
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      计算机基础
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/designPattern.html" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/network/http.html" class="nav-link"><i class="iconfont undefined"></i>
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/algorithm/tree.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/codeByHand/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  手撕代码
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/questions.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题目
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目相关
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-cd01cc30></div> <aside class="sidebar" data-v-cd01cc30><div class="personal-info-wrapper" data-v-2a0ed2ae data-v-cd01cc30><!----> <h3 class="name" data-v-2a0ed2ae>
+    Cbasu
+  </h3> <div class="num" data-v-2a0ed2ae><div data-v-2a0ed2ae><h3 data-v-2a0ed2ae>0</h3> <h6 data-v-2a0ed2ae>Article</h6></div> <div data-v-2a0ed2ae><h3 data-v-2a0ed2ae>0</h3> <h6 data-v-2a0ed2ae>Tag</h6></div></div> <hr data-v-2a0ed2ae></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/JavaScript/Js/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/css/basics.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/vue/basic.html" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/performance.html" class="nav-link"><i class="iconfont undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/WebWorker.html" class="nav-link"><i class="iconfont undefined"></i>
+  WebWorker
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/PWA.html" class="nav-link"><i class="iconfont undefined"></i>
+  PWA
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/regularExpression.html" class="nav-link"><i class="iconfont undefined"></i>
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/FrontEnd/crossDomain.html" class="nav-link"><i class="iconfont undefined"></i>
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      计算机基础
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/designPattern.html" class="nav-link"><i class="iconfont undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/network/http.html" class="nav-link"><i class="iconfont undefined"></i>
+  网络
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/ComputerBasic/algorithm/tree.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/codeByHand/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  手撕代码
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/questions.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题目
+</a></li><li class="dropdown-item"><!----> <a href="/cblog.github.io/interview/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目相关
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cblog.github.io/FrontEnd/JavaScript/JS.html" aria-current="page" class="active sidebar-link">JavaScript</a></li><li><a href="/cblog.github.io/FrontEnd/JavaScript/ES6.html" class="sidebar-link">ES6</a></li><li><a href="/cblog.github.io/FrontEnd/JavaScript/DOM.html" class="sidebar-link">DOM</a></li><li><a href="/cblog.github.io/FrontEnd/JavaScript/BOM.html" class="sidebar-link">BOM</a></li><li><a href="/cblog.github.io/FrontEnd/JavaScript/Ajax&amp;Axios&amp;Fetch.html" class="sidebar-link">Ajax&amp;Axios&amp;Fetch</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-623c7d26 data-v-cd01cc30><h3 class="title" style="display:none;" data-v-623c7d26 data-v-623c7d26></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-623c7d26 data-v-623c7d26><input type="password" value="" data-v-623c7d26> <span data-v-623c7d26>Konck! Knock!</span> <button data-v-623c7d26>OK</button></label> <div class="footer" style="display:none;" data-v-623c7d26 data-v-623c7d26><span data-v-623c7d26><i class="iconfont reco-theme" data-v-623c7d26></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-623c7d26>vuePress-theme-reco</a></span> <span data-v-623c7d26><i class="iconfont reco-copyright" data-v-623c7d26></i> <a data-v-623c7d26><span data-v-623c7d26>Cbasu</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-cd01cc30><main class="page"><div class="page-title" style="display:none;"><h1 class="title">一 作用域</h1> <div data-v-8bc6ae5c><i class="iconfont reco-account" data-v-8bc6ae5c><span data-v-8bc6ae5c>Cbasu</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="一-作用域"><a href="#一-作用域" class="header-anchor">#</a> 一 作用域</h2> <p>可访问变量的集合</p> <h3 id="分类"><a href="#分类" class="header-anchor">#</a> 分类</h3> <ol><li>全局作用域</li> <li>函数作用域</li> <li>块级作用域</li></ol> <h3 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h3> <p>当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链。</p> <h3 id="函数作用域"><a href="#函数作用域" class="header-anchor">#</a> 函数作用域</h3> <p>函数的作用域在函数定义的时候就决定了<br>
+这是因为函数有一个内部属性 [[scope]]，当函数创建的时候，就会保存所有父变量对象到其中，你可以理解 [[scope]] 就是所有父变量对象的层级链，但是注意：[[scope]] 并不代表完整的作用域链！</p> <h3 id="js是静态作用域"><a href="#js是静态作用域" class="header-anchor">#</a> js是静态作用域</h3> <div class="language- extra-class"><pre class="language-text"><code>var value = 1;
+
+function foo() {
+    console.log(value);
+}
+
+function bar() {
+    var value = 2;
+    foo();
+}
+
+bar();
+</code></pre></div><p>结果是 1，因为函数的作用域在函数定义的时候就决定了，按照作用域链foo()中没有value则去父级作用域找</p> <h2 id="二-执行上下文"><a href="#二-执行上下文" class="header-anchor">#</a> 二 执行上下文</h2> <p>定义：js代码运行环境<br>
+分类：全局执行上下文，函数上下文，eval上下文</p> <h4 id="执行栈"><a href="#执行栈" class="header-anchor">#</a> 执行栈</h4> <p>执行栈用于存储代码执行期间创建的所有上下文</p> <h2 id="三-this"><a href="#三-this" class="header-anchor">#</a> 三 this</h2> <ol><li>默认绑定：函数调用时无任何调用前缀的情景，指向全局对象</li> <li>隐式绑定：指向调用函数的那个对象<br>
+如果存在多个对象，this指向距离调用自己最近的对象
+<h4 id="隐式丢失-this指向window的情况"><a href="#隐式丢失-this指向window的情况" class="header-anchor">#</a> 隐式丢失（this指向window的情况）</h4> <ol><li>参数传递</li></ol> <div class="language- extra-class"><pre class="language-text"><code>function fn1(param) {
+    param();
+};
+fn1(obj.fn);
+</code></pre></div>2)变量赋值<div class="language- extra-class"><pre class="language-text"><code> let fn1 = obj.fn;
+ fn1(); 
+</code></pre></div></li> <li>显式绑定：通过call、apply以及bind<br>
+【注意】bind多次执行，函数this还是指向第一次bind的对象。因为bind属于硬绑定，返回的 boundFunction 的 this 指向无法再次通过bind、apply或 call 修改</li> <li>new</li> <li>箭头函数的this:等于它上层上下文中的this</li></ol> <h2 id="四-闭包"><a href="#四-闭包" class="header-anchor">#</a> 四 闭包</h2> <ol><li>解释：一个可以访问外部作用域的内部函数。</li> <li>在本质上，闭包是将函数内部和函数外部连接起来的桥梁。</li> <li>闭包中的变量并不保存中栈内存中，而是保存在堆内存中，这也就解释了为什么闭包还能引用到函数内的变量。</li></ol> <h2 id="五-原型"><a href="#五-原型" class="header-anchor">#</a> 五 原型</h2> <ul><li>每个构造函数(constructor)都有一个原型对象(prototype),原型对象都包含一个指向构造函数的指针,而实例(instance)都包含一个指向原型对象的内部指针.</li> <li>如果试图引用对象(实例instance)的某个属性,会首先在对象内部寻找该属性,直至找不到,然后才在该对象的原型(instance.prototype)里去找这个属性.</li></ul> <h3 id="原型链的问题"><a href="#原型链的问题" class="header-anchor">#</a> 原型链的问题</h3> <ul><li>问题一: 当原型链中包含引用类型值的原型时,该引用类型值会被所有实例共享;</li> <li>问题二: 在创建子类型(例如创建Son的实例)时,不能向超类型(例如Father)的构造函数中传递参数.</li></ul> <h2 id="六-继承"><a href="#六-继承" class="header-anchor">#</a> 六 继承</h2> <p><a href="http://louiszhai.github.io/2015/12/15/prototypeChain/" target="_blank" rel="noopener noreferrer">🔗链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_1-原型链继承"><a href="#_1-原型链继承" class="header-anchor">#</a> 1. 原型链继承</h3> <p><strong>原理：让新实例的原型等于父类的实例</strong> <code>Child.prototype = new Father()</code></p> <h4 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h4> <p>实例可继承的属性有：实例的构造函数的属性，父类构造函数属性，父类原型的属性。（新实例不会继承父类实例的属性！）</p> <h4 id="缺点"><a href="#缺点" class="header-anchor">#</a> 缺点</h4> <ol><li>新实例无法向父类构造函数传参。</li> <li>继承单一。</li> <li>所有新实例都会共享父类实例的属性。（原型上的属性是共享的，一个实例修改了原型属性，另一个实例的原型属性也会被修改！）</li></ol> <h3 id="_2-构造函数继承"><a href="#_2-构造函数继承" class="header-anchor">#</a> 2. 构造函数继承</h3> <p><strong>原理: 在子类构造函数中使用父类构造函数+call()。</strong></p> <div class="language- extra-class"><pre class="language-text"><code>function Child（）{
+    Father.call(this.name)
+}
+</code></pre></div><h4 id="特点-2"><a href="#特点-2" class="header-anchor">#</a> 特点</h4> <ol><li>只继承了父类构造函数的属性，没有继承父类原型的属性。</li> <li>可以继承多个构造函数属性（call多个）。</li></ol> <h4 id="缺点-2"><a href="#缺点-2" class="header-anchor">#</a> 缺点</h4> <p>不能继承父类原型的属性</p> <h3 id="_3-组合继承"><a href="#_3-组合继承" class="header-anchor">#</a> 3. 组合继承</h3> <h4 id="特点-3"><a href="#特点-3" class="header-anchor">#</a> 特点</h4> <p>结合了两种模式的优点，传参和复用</p> <h4 id="缺点-3"><a href="#缺点-3" class="header-anchor">#</a> 缺点</h4> <p>调用了两次父类构造函数（耗内存），子类的构造函数会代替原型上的那个父类构造函数。</p> <h3 id="_4-原型式继承"><a href="#_4-原型式继承" class="header-anchor">#</a> 4. 原型式继承</h3> <div class="language- extra-class"><pre class="language-text"><code>function content（obj){
+    function Child(){} //声明子类的构造函数
+    Child.prototype = obj 
+    return new Child()  //    返回实例
+}
+let father = new Father();
+let child = content(father)
+</code></pre></div><p><strong>原理：在object()函数内部, 先创建一个临时性的构造函数, 然后将传入的对象作为这个构造函数的原型,最后返回了这个临时类型的一个新实例。【浅复制】object.create()就是这个原理。</strong></p> <h4 id="特点-4"><a href="#特点-4" class="header-anchor">#</a> 特点</h4> <p>类似于复制一个对象，用函数来包装</p> <h4 id="缺点-4"><a href="#缺点-4" class="header-anchor">#</a> 缺点</h4> <h3 id="_5-寄生式继承"><a href="#_5-寄生式继承" class="header-anchor">#</a> 5. 寄生式继承</h3> <p><strong>原理：就是给原型式继承外面套了个壳子。</strong></p> <div class="language- extra-class"><pre class="language-text"><code>function content（obj){
+    function Child(){} //声明子类的构造函数
+    Child.prototype = obj 
+    return new Child()  //    返回实例
+}
+let father = new Father();
+function subobject（obj){
+    let child = content(father)
+    child.name = 'cb'
+    return child
+}
+let child1 = subobject(father)
+</code></pre></div><h4 id="缺点-没用到原型-无法复用。"><a href="#缺点-没用到原型-无法复用。" class="header-anchor">#</a> 缺点：没用到原型，无法复用。</h4> <h3 id="_6-寄生组合式继承"><a href="#_6-寄生组合式继承" class="header-anchor">#</a> 6. 寄生组合式继承</h3> <hr> <div class="language- extra-class"><pre class="language-text"><code>function content（obj){
+    function Child(){} 
+    Child.prototype = obj 
+    return new Child() 
+}
+let con = content(Father.prototype); //继承原型属性
+
+function Sub（){
+    Father.call(this)//继承父类构造函数属性
+}
+//重点
+Sub.prototype = con //继承con的实例
+con.constructor = Sub
+let child1 = new Sub()
+</code></pre></div><h3 id="_7-class"><a href="#_7-class" class="header-anchor">#</a> 7. Class</h3> <div class="language- extra-class"><pre class="language-text"><code>class father{}
+
+class son extends father{
+    Constructor{
+        super(继承父类的属性)
+    }
+}
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c8d125c6 data-v-c8d125c6><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c8d125c6><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c8d125c6></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c8d125c6></path></svg></div><div class="kanbanniang" data-v-ee8d62e6><div class="banniang-container" style="display:;" data-v-ee8d62e6><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-ee8d62e6>
+      欢迎来到 Cbasu
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-ee8d62e6><i class="kbnfont kbn-ban-home ban-home" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-message message" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-close close" data-v-ee8d62e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-ee8d62e6><i class="kbnfont kbn-ban-info info" data-v-ee8d62e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-ee8d62e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-ee8d62e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-ee8d62e6>
+    看板娘
+  </div></div></div></div>
+    <script src="/cblog.github.io/assets/js/app.d8a0645a.js" defer></script><script src="/cblog.github.io/assets/js/3.7fe797ad.js" defer></script><script src="/cblog.github.io/assets/js/1.36fcc0b1.js" defer></script><script src="/cblog.github.io/assets/js/24.e92d046f.js" defer></script>
+  </body>
+</html>
